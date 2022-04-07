@@ -1,0 +1,132 @@
+year: null
+success: null
+helgdagar:
+  -
+    name: Nyårsdagen
+    day: '01-01'
+    free: true
+  -
+    name: Trettondagsafton
+    day: '01-05'
+    free: false
+  -
+    name: Trettondedag jul
+    day: '01-06'
+    free: true
+  -
+    name: Skärtorsdag
+    free: false
+    other:
+      name: Påskdagen
+      add: -3
+  -
+    name: Långfredagen
+    free: true
+    other:
+      name: Påskdagen
+      add: -2
+  -
+    name: Påskafton
+    free: true
+    other:
+      name: Påskdagen
+      add: -1
+  -
+    name: Påskdagen
+    description: 'Påskdagen infaller den första söndagen efter första metonska fullmånen som infaller på eller närmast efter vårdagjämningen.'
+    free: true
+  -
+    name: Annandag påsk
+    free: true
+    other:
+      name: Påskdagen
+      add: 1
+  -
+    name: Valborgsmässoafton
+    free: false
+    day: '04-30'
+  -
+    name: Första maj
+    free: true
+    day: '05-01'
+  -
+    name: Kristi himmelfärdsdag
+    free: true
+    other:
+      name: Påskdagen
+      add: 39
+  -
+    name: Pingstafton
+    free: false
+    other:
+      name: Påskdagen
+      add: 48
+  -
+    name: Pingstdagen
+    free: true
+    other:
+      name: Påskdagen
+      add: 49
+  -
+    name: Sveriges nationaldag
+    free: true
+    day: '06-06'
+  -
+    name: Midsommarafton
+    free: true
+    first_day:
+      weekday: 5
+      from: '06-19'
+      to: '06-25'
+  -
+    name: Midsommardagen
+    free: true
+    first_day:
+      weekday: 6
+      from: '06-20'
+      to: '06-26'
+  -
+    name: Alla helgons afton
+    free: false
+    first_day:
+      weekday: 5
+      from: '10-30'
+      to: '11-05'
+  -
+    name: Alla helgons dag
+    free: true
+    first_day:
+      weekday: 6
+      from: '10-31'
+      to: '11-06'
+  -
+    name: Julafton
+    free: true
+    day: '12-24'
+  -
+    name: Juldagen
+    free: true
+    day: '12-25'
+  -
+    name: Annandag jul
+    free: true
+    day: '12-26'
+  -
+    name: Nyårsafton
+    free: true
+    day: '12-31'
+anchor:
+  vårdagjämningen: '03-20'
+  fullmoon:
+    - '2022-04-16'
+    - '2023-04-06'
+    - '2024-03-25'
+    - '2025-04-13'
+    - '2026-04-02'
+    - '2027-03-22'
+    - '2028-04-09'
+    - '2029-03-30'
+    - '2030-04-18'
+    - '2031-04-07'
+    - '2032-03-27'
+    - '2033-04-14'
