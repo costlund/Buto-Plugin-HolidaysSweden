@@ -1,5 +1,9 @@
-version: 1.1.1
+version: 1.1.2
 history:
+  1.1.2:
+    date: '2022-06-09'
+    title: Versions
+    description: 'Versions update.'
   1.1.1:
     date: '2022-06-07'
     title: Versions
@@ -18,7 +22,7 @@ plugin:
     version: 1.4.0
   -
     name: date/date_v1
-    version: 1.0.0
+    version: 1.1.0
 sys:
   -
     name: mercury
