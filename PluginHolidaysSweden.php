@@ -9,9 +9,40 @@ class PluginHolidaysSweden{
   public function widget_demo($data){
     if(wfRequest::get('year')){
       $data['data']['year'] = wfRequest::get('year');
+    }else{
+      $data['data']['year'] = date('Y');
     }
     $data = new PluginWfArray($data['data']);
-    wfHelp::print($this->calcHolidays($data->get()));
+    $this->calcHolidays($data->get());
+    /**
+     * 
+     */
+    wfHelp::print($this->holidays);
+    /**
+     * Create string with data to copy to excel.
+     */
+    $str = '';
+    foreach($this->holidays->get('helgdagar') as $v){
+      $i = new PluginWfArray($v);
+      $str .= $i->get('calc/date');
+      $str .= "\t";
+      $str .= '08:00';
+      $str .= "\t";
+      if($i->get('calc/free')){
+        $str .= '480';
+      }else{
+        $str .= '0';
+      }
+      $str .= "\t";
+      $str .= $i->get('name');
+      $str .= "\n";
+    }
+    wfHelp::textarea_dump($str);
+  }
+  public function page_demo(){
+    wfPlugin::enable('holidays/sweden');
+    $widget = wfDocument::createWidget('holidays/sweden', 'demo');
+    wfDocument::renderElement(array($widget));
   }
   public function calcHolidays($data){
     $this->holidays->set('year', $data['year']);
