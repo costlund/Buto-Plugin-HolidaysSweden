@@ -115,7 +115,7 @@ class PluginHolidaysSweden{
     $easter_day = null;
     $fullmoon = null;
     foreach($this->holidays->get('anchor/fullmoon') as $v){
-      if(substr($v, 0, 4)==$data['year']){
+      if(wfPhpfunc::substr($v, 0, 4)==$data['year']){
         $fullmoon = $v;
       }
     }
